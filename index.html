@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Slavonija Stroj j.d.o.o. – građevinski strojevi, oprema i priključci.">
+  <title>Slavonija Stroj | Građevinski strojevi i oprema</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#72b82a;--green2:#9bd34d;--dark:#111315;--dark2:#181b1e;--text:#1a1d20;--muted:#687078;--line:#e6e8e9;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #eee}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .logo{width:220px;height:auto;display:block}
+    .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+    .navlinks a{transition:.2s}.navlinks a:hover{color:var(--green)}
+    .navcta{background:var(--green);color:#fff!important;padding:13px 20px;border-radius:2px}
+    .menu{display:none;border:0;background:none;font-size:28px}
+    .hero{min-height:650px;background:linear-gradient(90deg,rgba(8,10,11,.92),rgba(8,10,11,.48)),url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=85') center/cover;display:flex;align-items:center;color:#fff}
+    .hero-content{max-width:720px;padding:100px 0}
+    .eyebrow{color:var(--green2);font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+    h1{font-family:Oswald,Arial,sans-serif;font-size:clamp(50px,7vw,88px);line-height:.98;text-transform:uppercase;letter-spacing:-.02em}
+    .hero p{max-width:600px;color:#d7d9da;font-size:18px;margin:25px 0 32px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;border:1px solid var(--green);background:var(--green);color:#fff}
+    .btn.alt{background:transparent;border-color:#fff}
+    section{padding:95px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+    .kicker{font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--green);text-transform:uppercase}
+    h2{font-family:Oswald,Arial,sans-serif;text-transform:uppercase;font-size:48px;line-height:1.05;margin-top:8px}
+    .section-intro{max-width:480px;color:var(--muted)}
+    .inventory{background:#f5f6f4}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;border:1px solid var(--line);transition:.25s;overflow:hidden}
+    .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.08)}
+    .photo{height:235px;background:#ddd center/cover;position:relative}
+    .tag{position:absolute;top:14px;left:14px;background:var(--green);color:#fff;padding:7px 10px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .cardbody{padding:22px}
+    .type{font-size:11px;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+    .card h3{font-size:22px;margin:7px 0 12px}
+    .specs{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:14px}
+    .price{font-size:21px;font-weight:800;margin-top:18px}
+    .card .link{display:inline-block;margin-top:15px;color:#111;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .about{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+    .about p{color:var(--muted);margin-top:20px;font-size:16px}
+    .aboutbox{background:var(--dark);color:#fff;padding:44px}
+    .aboutbox .number{font-family:Oswald;font-size:70px;color:var(--green);line-height:1}
+    .aboutbox p{color:#bfc4c7;margin:8px 0 28px}
+    .services{background:var(--dark);color:#fff}
+    .services .section-intro{color:#aeb5b8}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#303437}
+    .service{background:var(--dark);padding:38px;min-height:190px}
+    .service span{color:var(--green);font-size:28px;font-weight:800}
+    .service h3{margin:15px 0 8px;font-size:19px}.service p{color:#aeb5b8;font-size:14px}
+    .contact{background:#f5f6f4}
+    .contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    .contactbox{background:#fff;border:1px solid var(--line);padding:32px}
+    .contactbox h3{margin-bottom:12px}.contactbox p{color:var(--muted);margin:5px 0}
+    .contactbox a{color:#222;font-weight:700}.contactbox a:hover{color:var(--green)}
+    footer{background:#0c0e0f;color:#aeb3b6;padding:30px 0;font-size:12px}
+    footer .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    footer strong{color:#fff}
+    @media(max-width:900px){.navlinks{display:none}.menu{display:block}.grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:35px}.service-grid{grid-template-columns:1fr 1fr}.contactgrid{grid-template-columns:1fr}}
+    @media(max-width:600px){.nav{height:70px}.logo{width:190px}.hero{min-height:600px}.hero-content{padding:75px 0}.hero p{font-size:16px}section{padding:70px 0}.section-head{display:block}h2{font-size:40px}.grid{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr}.photo{height:230px}.aboutbox{padding:30px}.navcta{display:none}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a href="#top"><img class="logo" src="images/logo.png" alt="Slavonija Stroj"></a>
+    <nav class="navlinks">
+      <a href="#strojevi">Strojevi</a><a href="#usluge">Usluge</a><a href="#onama">O nama</a><a href="#kontakt">Kontakt</a>
+      <a class="navcta" href="#kontakt">Pošalji upit</a>
+    </nav>
+    <button class="menu" aria-label="Izbornik">☰</button>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">Slavonija Stroj j.d.o.o.</div>
+    <h1>Strojevi koji rade.</h1>
+    <p>Prodaja građevinskih strojeva, opreme i priključaka. Pouzdana oprema za ozbiljan posao.</p>
+    <div class="buttons"><a class="btn" href="#strojevi">Pogledaj ponudu</a><a class="btn alt" href="#kontakt">Kontakt</a></div>
+  </div>
+</section>
+
+<section id="strojevi" class="inventory">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">Trenutna ponuda</div><h2>Strojevi</h2></div>
+      <p class="section-intro">Primjeri oglasa su privremeno postavljeni kao demo. Fotografije, cijene i specifikacije možeš kasnije zamijeniti svojim podacima.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80')"><span class="tag">Na prodaju</span></div><div class="cardbody"><div class="type">Mini bager</div><h3>Kubota KX015-4</h3><div class="specs"><span>2019.</span><span>≈ 1.500 kg</span><span>Diesel</span></div><div class="price">16.500 €</div><a class="link" href="#kontakt">Zatraži informacije →</a></div></article>
+      <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=1000&q=80')"><span class="tag">Demo</span></div><div class="cardbody"><div class="type">Bager</div><h3>Građevinski bager</h3><div class="specs"><span>Godina —</span><span>Radni sati —</span><span>Diesel</span></div><div class="price">Cijena na upit</div><a class="link" href="#kontakt">Zatraži informacije →</a></div></article>
+      <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=80')"><span class="tag">Demo</span></div><div class="cardbody"><div class="type">Bager</div><h3>Midi bager</h3><div class="specs"><span>Godina —</span><span>Radni sati —</span><span>Diesel</span></div><div class="price">Cijena na upit</div><a class="link" href="#kontakt">Zatraži informacije →</a></div></article>
+      <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80')"><span class="tag">Demo</span></div><div class="cardbody"><div class="type">Prikolica</div><h3>Labudica 3,5 t</h3><div class="specs"><span>3.500 kg</span><span>Prikolica</span><span>Demo</span></div><div class="price">Cijena na upit</div><a class="link" href="#kontakt">Zatraži informacije →</a></div></article>
+      <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80')"><span class="tag">Demo</span></div><div class="cardbody"><div class="type">Priključak</div><h3>Hidraulični čekić</h3><div class="specs"><span>Za bagere</span><span>Oprema</span><span>Demo</span></div><div class="price">Cijena na upit</div><a class="link" href="#kontakt">Zatraži informacije →</a></div></article>
+      <article class="card"><div class="photo" style="background-image:url('https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=80')"><span class="tag">Demo</span></div><div class="cardbody"><div class="type">Oprema</div><h3>Građevinska oprema</h3><div class="specs"><span>Razni modeli</span><span>Priključci</span><span>Demo</span></div><div class="price">Cijena na upit</div><a class="link" href="#kontakt">Zatraži informacije →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="onama">
+  <div class="container about">
+    <div><div class="kicker">Slavonija Stroj</div><h2>O nama</h2><p><strong>Slavonija Stroj j.d.o.o.</strong> je jednostavno društvo s ograničenom odgovornošću sa sjedištem u Hrvatskoj, usmjereno na trgovinu strojevima i opremom.</p><p>Pretežita djelatnost: <strong>46.64.0 – Trgovina na veliko ostalim strojevima i opremom.</strong></p></div>
+    <div class="aboutbox"><div class="number">01</div><h3>Fokus na strojeve.</h3><p>Na jednom mjestu predstavljamo strojeve, priključke i opremu dostupnu za prodaju.</p><a class="btn" href="#strojevi">Pregledaj ponudu</a></div>
+  </div>
+</section>
+
+<section id="usluge" class="services">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">Što nudimo</div><h2>Usluge</h2></div><p class="section-intro">Jednostavan i direktan pristup nabavi građevinske mehanizacije i opreme.</p></div>
+    <div class="service-grid">
+      <div class="service"><span>01</span><h3>Prodaja strojeva</h3><p>Pregled i prodaja građevinskih i radnih strojeva.</p></div>
+      <div class="service"><span>02</span><h3>Oprema i priključci</h3><p>Priključna oprema poput hidrauličnih čekića i druge opreme.</p></div>
+      <div class="service"><span>03</span><h3>Nabava po upitu</h3><p>Javi što tražiš i provjerit ćemo dostupne opcije.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="contact">
+  <div class="container">
+    <div class="section-head"><div><div class="kicker">Javi nam se</div><h2>Kontakt</h2></div><p class="section-intro">Za cijene, dodatne fotografije, specifikacije ili informacije o strojevima pošalji upit.</p></div>
+    <div class="contactgrid">
+      <div class="contactbox"><h3>Slavonija Stroj j.d.o.o.</h3><p><strong>OIB:</strong> 31252247938</p><p><strong>MBS:</strong> 030319692</p><p><strong>Djelatnost:</strong> 46.64.0</p></div>
+      <div class="contactbox"><h3>Email</h3><p><a href="mailto:goranmacura6@gmail.com">goranmacura6@gmail.com</a></p><p style="margin-top:16px">Telefon: <strong>dodaj broj telefona</strong></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="container foot"><div>© 2026 <strong>Slavonija Stroj j.d.o.o.</strong></div><div>Građevinski strojevi & oprema</div></div></footer>
+</body>
+</html>
